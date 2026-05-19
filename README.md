@@ -1,6 +1,6 @@
 # 🎬 Six Degrees
 
-> Find the shortest path between any two actors through shared films — powered by Neo4j graph traversal.
+> Find the shortest path between any two actors through shared films - powered by Neo4j graph traversal.
 
 ![Tech Stack](https://img.shields.io/badge/Neo4j-AuraDB-008CC1?style=flat-square&logo=neo4j&logoColor=white)
 ![Backend](https://img.shields.io/badge/Node.js-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
@@ -11,7 +11,7 @@
 
 ## What is this?
 
-Six Degrees is a full-stack graph database learning project inspired by the **Six Degrees of Kevin Bacon** concept. Type any two actors and the app finds the shortest chain connecting them through movies they've appeared in together — a problem that would be painful in SQL but trivially elegant in a graph database.
+Six Degrees is a full-stack graph database learning project inspired by the **Six Degrees of Kevin Bacon** concept. Type any two actors and the app finds the shortest chain connecting them through movies they've appeared in together - a problem that would be painful in SQL but trivially elegant in a graph database.
 
 ```
 Tom Hanks → Forrest Gump → Sally Field → Spider-Man: No Way Home → Tom Holland
@@ -36,7 +36,7 @@ The core query is a single Cypher `shortestPath()` call that traverses the graph
 
 ## How it works
 
-The data model is a **bipartite graph** — two node types with edges only flowing between them:
+The data model is a **bipartite graph** - two node types with edges only flowing between them:
 
 ```
 (:Actor)-[:ACTED_IN]->(:Movie)
@@ -185,10 +185,10 @@ This fetches ~1000 popular movies and their top 15 cast members from TMDb and lo
 ### 4. Run the app
 
 ```bash
-# Terminal 1 — backend
+# Terminal 1 - backend
 cd backend && npm run dev
 
-# Terminal 2 — frontend
+# Terminal 2 - frontend
 cd frontend && npm run dev
 ```
 
@@ -198,9 +198,9 @@ Visit `http://localhost:5173`, search for two actors and hit **Find Path**.
 
 ## What I learned
 
-- **Graph databases shine** at relationship traversal — the `shortestPath()` query that would take complex recursive SQL is a one-liner in Cypher
-- **Bipartite graphs** are a natural fit for actor-movie data — two node types, edges only between types, never within
-- **Neo4j AuraDB** is a great free option for learning — no setup, just a connection string
+- **Graph databases shine** at relationship traversal - the `shortestPath()` query that would take complex recursive SQL is a one-liner in Cypher
+- **Bipartite graphs** are a natural fit for actor-movie data - two node types, edges only between types, never within
+- **Neo4j AuraDB** is a great free option for learning - no setup, just a connection string
 - **React Flow** makes interactive graph visualization approachable with custom node components
 - The difference between a **knowledge graph** (semantic, inferential) and a **domain graph** (operational, path queries) is meaningful in practice
 
