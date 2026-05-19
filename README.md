@@ -1,5 +1,7 @@
 # 🎬 Six Degrees
 
+https://six-degrees.netlify.app/
+
 > Find the shortest path between any two actors through shared films - powered by Neo4j graph traversal.
 
 ![Tech Stack](https://img.shields.io/badge/Neo4j-AuraDB-008CC1?style=flat-square&logo=neo4j&logoColor=white)
