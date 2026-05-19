@@ -11,7 +11,7 @@
 
 ## What is this?
 
-Six Degrees is a full-stack graph database learning project inspired by the **Six Degrees of Kevin Bacon** concept. Type any two actors and the app finds the shortest chain connecting them through movies they've appeared in together - a problem that would be painful in SQL but trivially elegant in a graph database.
+Six Degrees is a full-stack graph database project inspired by the **Six Degrees of Kevin Bacon** concept. Type any two actors and the app finds the shortest chain connecting them through movies they've appeared in together - a problem that would be painful in SQL but trivially elegant in a graph database.
 
 ```
 Tom Hanks → Forrest Gump → Sally Field → Spider-Man: No Way Home → Tom Holland
@@ -164,13 +164,13 @@ NEO4J_URI=neo4j+s://xxxxxxxx.databases.neo4j.io
 NEO4J_USERNAME=neo4j
 NEO4J_PASSWORD=your-password
 TMDB_TOKEN=your-tmdb-read-access-token
-PORT=3001
+PORT=5000
 ```
 
 `frontend/.env`
 
 ```env
-VITE_API_URL=http://localhost:3001
+VITE_API_URL=http://localhost:5000
 ```
 
 ### 3. Seed the database
@@ -200,7 +200,7 @@ Visit `http://localhost:5173`, search for two actors and hit **Find Path**.
 
 - **Graph databases shine** at relationship traversal - the `shortestPath()` query that would take complex recursive SQL is a one-liner in Cypher
 - **Bipartite graphs** are a natural fit for actor-movie data - two node types, edges only between types, never within
-- **Neo4j AuraDB** is a great free option for learning - no setup, just a connection string
+- **Neo4j AuraDB** is a great free option - no setup, just a connection string
 - **React Flow** makes interactive graph visualization approachable with custom node components
 - The difference between a **knowledge graph** (semantic, inferential) and a **domain graph** (operational, path queries) is meaningful in practice
 
@@ -209,7 +209,3 @@ Visit `http://localhost:5173`, search for two actors and hit **Find Path**.
 ## Data
 
 Movie and cast data is sourced from [The Movie Database (TMDb)](https://www.themoviedb.org/). This product uses the TMDB API but is not endorsed or certified by TMDB.
-
----
-
-_Built in a half day as a hands-on introduction to graph databases._
