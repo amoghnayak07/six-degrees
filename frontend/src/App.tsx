@@ -314,6 +314,9 @@ function App() {
           proOptions={{ hideAttribution: true }}
           minZoom={0.3}
           maxZoom={2}
+          panOnScroll
+          zoomOnPinch
+          panOnDrag
         >
           <Background color="#1a1a1a" gap={40} size={1} />
           <Controls
